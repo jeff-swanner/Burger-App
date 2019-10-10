@@ -1,3 +1,12 @@
 body {
     background-image: url("../img/food.png");
+    color: white;
+}
+
+.eat-burger {
+    right: 0px;
+}
+
+.row {
+    background-color: rgba(168, 168, 168, 0.2);
 }

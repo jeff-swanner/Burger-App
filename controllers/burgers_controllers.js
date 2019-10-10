@@ -7,11 +7,10 @@ var burger = require("../models/burger.js");
 
 router.get("*", function(req, res) {
     burger.selectAll(function(data) {
-      var hbsObject = {
-        cats: data
+      var burgerObject = {
+        burger: data
       };
-      console.log(hbsObject);
-      res.render("index", hbsObject);
+      res.render("index", burgerObject);
     });
 });
   
@@ -25,7 +24,7 @@ router.post("/api/burgers", function(req, res) {
   
 router.put("/api/burgers/:id", function(req, res) {
 
-    cat.updateOne(req.params.id, function(result) {
+    burger.updateOne(req.params.id, function(result) {
         if (result.changedRows == 0) {
         // If no rows were changed, then the ID must not exist, so 404
         return res.status(404).end();
