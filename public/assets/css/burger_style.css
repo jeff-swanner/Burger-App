@@ -11,3 +11,7 @@ body {
     background-color: snow;
     border-radius: 10px;
 }
+
+a {
+    color: white;
+}

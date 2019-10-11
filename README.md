@@ -2,10 +2,11 @@
 
 ## Description
 
-This application is a burger logger that uses Node.js, express, MySQL, Handlebars, and a custom ORM. It allows a user to create new burgers and then devour them. It follows the MVC software design pattern. The directory strucutre is outlined below. A working version is deployed to heroku and be found at the bottom of the readme. 
+This application is a burger logger that uses Node.js, express, MySQL, Handlebars, and a custom ORM. It allows a user to create new burgers and then choose to eat them. The application follows the MVC software design pattern for file strucutre. The directory structure is outlined below. A working version is deployed to heroku and be found at the bottom of the readme. 
 
 #### Directory structure
 
+```
 ├── config
 │   ├── connection.js
 │   └── orm.js
@@ -39,6 +40,7 @@ This application is a burger logger that uses Node.js, express, MySQL, Handlebar
     ├── index.handlebars
     └── layouts
         └── main.handlebars
+```
 
 ## How To Use
 1. Download the github repository to your computer. 
