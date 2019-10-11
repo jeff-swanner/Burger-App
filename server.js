@@ -1,7 +1,10 @@
+// Requires express module
 var express = require("express");
 
+// Declares server port
 var PORT = process.env.PORT || 8080;
 
+// Creates express app
 var app = express();
 
 // Serve static content for the app from the "public" directory in the application directory.

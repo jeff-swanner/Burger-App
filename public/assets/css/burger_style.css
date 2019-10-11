@@ -1,6 +1,6 @@
 body {
     background-image: url("../img/food.png");
-    color: white;
+    color: black;
 }
 
 .eat-burger {
@@ -8,5 +8,6 @@ body {
 }
 
 .row {
-    background-color: rgba(168, 168, 168, 0.2);
+    background-color: snow;
+    border-radius: 10px;
 }

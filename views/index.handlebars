@@ -1,10 +1,9 @@
-<div class="container">
+<div class="container mt-3">
     <div class="row">
         <div class="col-lg-12">
             <h1 class="text-center">You Hungry Bro?!
             <img src="/assets/img/burger.png" width="300px" class="img-responsive center-block" title="Burger" alt="Burger"></a>
             </h1>
-            
         </div>
     </div>
     <div class="row justify-content-md-center mt-3">
@@ -21,29 +20,29 @@
     <div class="row mt-3 justify-content-md-center">
         <div class="col-lg-6 mt-3">
             <h2 class="text-center">Available Burgers!</h2>
-            <ul>
-            {{#each burger}}
-                {{#unless devoured}}
-                        <p>{{burger_name}}
-                        <button class="eat-burger btn btn-light" data-id="{{id}}" >Eat dis burger!</button>
-                        </p>
-
-                {{/unless}}
-            {{/each}}
-            </ul>
+            <ol>
+                {{#each burger}}
+                    {{#unless devoured}}
+                        <li>
+                            <p>{{burger_name}}
+                                <button class="eat-burger btn btn-dark" data-id="{{id}}" >Eat dis burger!</button>
+                            </p>
+                        </li>
+                    {{/unless}}
+                {{/each}}
+            </ol>
         </div>
         <div class="col-lg-6 mt-3">
             <h2 class="text-center">Already eaten :(</h2>
             <ul>
-            {{#each burger}}
-                {{#if devoured}}
-                    <li>
-                        <p>{{burger_name}}</p>
-                    </li>
-                {{/if}}
-            {{/each}}
+                {{#each burger}}
+                    {{#if devoured}}
+                        <li>
+                            <p>{{burger_name}}</p>
+                        </li>
+                    {{/if}}
+                {{/each}}
             </ul>
         </div>
     </div>
 </div>
-

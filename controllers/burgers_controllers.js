@@ -1,11 +1,13 @@
+// Requires and creates router object
 var express = require("express");
-
 var router = express.Router();
 
-// Import the model (cat.js) to use its database functions.
+// Import the burger model to use its database functions.
 var burger = require("../models/burger.js");
 
+// Catch all route to load the main indes handlebars page
 router.get("*", function(req, res) {
+    // Loads all burgers in database and passes to handle bars
     burger.selectAll(function(data) {
       var burgerObject = {
         burger: data
@@ -14,6 +16,7 @@ router.get("*", function(req, res) {
     });
 });
   
+// Route for inserting new burger into database
 router.post("/api/burgers", function(req, res) {
     burger.insertOne(req.body.burgerInput, function(result) {
         // Send back the ID of the new quote
@@ -22,8 +25,8 @@ router.post("/api/burgers", function(req, res) {
     });
 });
   
+// Route for updating burger as devoured
 router.put("/api/burgers/:id", function(req, res) {
-
     burger.updateOne(req.params.id, function(result) {
         if (result.changedRows == 0) {
         // If no rows were changed, then the ID must not exist, so 404
@@ -34,7 +37,5 @@ router.put("/api/burgers/:id", function(req, res) {
     });
 });
 
-
-
-
+// Exports router model
 module.exports = router;

@@ -1,6 +1,7 @@
 // Set up MySQL connection.
 var mysql = require("mysql");
 
+// Sets connection to Jaws when deployed on heroku
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
   jaws = true;
@@ -12,8 +13,6 @@ if (process.env.JAWSDB_URL) {
       database: "burgers_db"
   });
 };
-
-console.log (connection.database);
 
 // Make connection.
 connection.connect(function(err) {
